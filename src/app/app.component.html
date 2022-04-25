@@ -1,9 +1,25 @@
-<div>
+<div id="map">
     <google-map
   height="500px"
   width="100%"
   [zoom]="zoom"
   [center]="center"
-></google-map>
+  >
+  <map-marker
+  #markerElem
+  *ngFor="let marker of markers"
+  [position]="marker.position"
+  [label]="marker.label"
+  [title]="marker.title"
+  
+>
+</map-marker>
+
+
+
+</google-map>
+
+<button (click)="addMarker()">Add marker</button>
+
     <router-outlet></router-outlet>
 </div>
