@@ -7,4 +7,17 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   title = 'EntregableP2';
+  center = {lat: 24, lng: 12};
+  zoom = 15;
+  display?: google.maps.LatLngLiteral;
+
+
+  ngOnInit() {
+    navigator.geolocation.getCurrentPosition((position) => {
+      this.center = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      }
+    })
+  }
 }

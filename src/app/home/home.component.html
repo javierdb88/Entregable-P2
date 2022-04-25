@@ -5,6 +5,11 @@
             <option *ngFor="let t of tipos">
                 {{t}}
             </option>
+            <google-map> width="750px"
+            height="450px"
+            [center]="center"
+            [zoom]="zoom">
+            </google-map>
 
         </select><br /><br />
         <label>Marca</label><br />
