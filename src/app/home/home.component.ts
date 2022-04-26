@@ -35,10 +35,12 @@ export class HomeComponent implements OnInit {
     this._datosService.addItem(currentItem);
   }
 
-
+  num:number=0;
   
   buscar(): void {
-    for(let i = 0; i<7; i++){
+    
+    this.num = Math.floor(Math.random() * 10)
+    for(let i = 0; i<this.num; i++){
       this.addItem();
     }
     

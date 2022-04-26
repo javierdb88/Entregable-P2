@@ -6,3 +6,25 @@
     justify-content: center;
     height: 100%;
 }
+body, html {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contenedor {
+    background: #EEE;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .elemento {
+    background: #666;
+    height: 100px;
+    width: 100px;
+  }

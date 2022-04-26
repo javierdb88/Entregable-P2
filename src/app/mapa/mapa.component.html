@@ -1,23 +1,25 @@
-<div id="map" (click)="marcadores()">
-    <google-map
-  height="500px"
-  width="100%"
-  [zoom]="zoom"
-  [center]="center"
+<div class="contenedor">
+  <div class="mapa" id="map" (click)="marcadores()">
+      <google-map
+    height="60vh"
+    width="80vw"
+    [zoom]="zoom"
+    [center]="center"
+    >
+    <map-marker
+    #markerElem
+    *ngFor="let marker of markers"
+    [position]="marker.position"
+    [label]="marker.label"
+    [title]="marker.title"
+    [options]="marker.options"
+    
   >
-  <map-marker
-  #markerElem
-  *ngFor="let marker of markers"
-  [position]="marker.position"
-  [label]="marker.label"
-  [title]="marker.title"
-  [options]="marker.options"
-  
->
-</map-marker>
+  </map-marker>
 
 
 
-</google-map>
-
-<!-- <button (click)="addMarker()">Add marker</button> -->
+  </google-map>
+  </div>
+  <h2>Se muestran {{this.len}} plazas disponibles</h2>
+</div>

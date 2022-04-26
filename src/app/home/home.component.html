@@ -1,32 +1,36 @@
-<div id="formulario">
+<div class="contenedor">
     
-        <label>Tipo de vehículo</label><br />
-        <select [(ngModel)]="tipo_vehiculo">
-            <option *ngFor="let t of tipos">
-                {{t}}
-            </option>
-            <google-map> width="750px"
-            height="450px"
-            [center]="center"
-            [zoom]="zoom">
-            </google-map>
+    <div style="text-align: center;">
+            <img src="https://eqvn.net/wp-content/uploads/2021/10/Artboard-17-copy-4@2x-8-300x300.png"><br />
+            <label><h2>Tipo de vehículo</h2></label>
+            <select [(ngModel)]="tipo_vehiculo">
+                <option *ngFor="let t of tipos">
+                    {{t}}
+                </option>
+                <google-map> width="750px"
+                height="450px"
+                [center]="center"
+                [zoom]="zoom">
+                </google-map>
 
-        </select><br /><br />
-        <label>Marca</label><br />
-        <input type="text" /><br /><br />
+            </select><br /><br />
+            <label><h2>Marca</h2></label>
+            <input type="text" />
 
-        <label>Modelo</label><br />
-        <input type="text" /><br /><br />
+            <label><h2>Modelo</h2></label>
+            <input type="text" />
 
-        <label>Radio de búsqueda (metros)</label><br />
-        <input type="number" /><br /><br />
-        <input type="checkbox" [(ngModel)]="Plaza.de_pago"/>
-        <label>Parking de pago</label><br /><br />
-        <input type="checkbox" [(ngModel)]="Plaza.disabled"/>
-        <label>Plazas de discapacitados</label><br /><br />
+            <label><h2>Radio de búsqueda (metros)</h2></label>
+            <input type="number" /><br />
+            <label><h2>Parking de pago</h2></label>
+            <input type="checkbox" [(ngModel)]="Plaza.de_pago"/>
+            <label style="font-size: 2.3vh; "><strong>Plazas de discapacitados</strong></label>
+            <input type="checkbox" [(ngModel)]="Plaza.disabled"/><br />
+            <br /><br />
+            
+            <button routerLink="/mapa" routerLinkActive="active" (click)="buscar()">Buscar</button>
+
         
-        <button routerLink="/mapa" routerLinkActive="active" (click)="buscar()">Buscar</button>
 
-    
-
+    </div>
 </div>
