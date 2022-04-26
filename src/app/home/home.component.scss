@@ -28,3 +28,21 @@ body, html {
     height: 100px;
     width: 100px;
   }
+
+  .labels {
+    font-size: 2.3vh;
+    font-weight: 530;
+
+  }
+
+  #imagen {
+    width: 20vh; height: 20vh; margin-top: -15vh;
+  }
+
+  .cuadradito {
+    text-align: center;
+    border-style: outset;
+    border-radius: 5px;
+    background-color: #71C8A4;
+    width: 21vw;
+  }

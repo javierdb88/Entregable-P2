@@ -1,8 +1,8 @@
 <div class="contenedor">
   <div class="mapa" id="map" (click)="marcadores()">
       <google-map
-    height="60vh"
-    width="80vw"
+    height="80vh"
+    width="90vw"
     [zoom]="zoom"
     [center]="center"
     >
@@ -21,5 +21,6 @@
 
   </google-map>
   </div>
-  <h2>Se muestran {{this.len}} plazas disponibles</h2>
+  
 </div>
+<h2>Se muestran {{this.len}} plazas disponibles</h2>
