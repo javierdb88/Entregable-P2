@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MapaComponent } from './mapa/mapa.component';
+import { DatosService } from './datos.service';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { MapaComponent } from './mapa/mapa.component';
     NoopAnimationsModule,
     GoogleMapsModule
   ],
-  providers: [],
+  providers: [DatosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

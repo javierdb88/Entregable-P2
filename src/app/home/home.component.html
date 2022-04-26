@@ -1,5 +1,5 @@
 <div id="formulario">
-    <form>
+    
         <label>Tipo de vehículo</label><br />
         <select [(ngModel)]="tipo_vehiculo">
             <option *ngFor="let t of tipos">
@@ -20,13 +20,13 @@
 
         <label>Radio de búsqueda (metros)</label><br />
         <input type="number" /><br /><br />
-        <input type="checkbox" [(ngModel)]="de_pago"/>
+        <input type="checkbox" [(ngModel)]="Plaza.de_pago"/>
         <label>Parking de pago</label><br /><br />
-        <input type="checkbox" [(ngModel)]="disabled"/>
+        <input type="checkbox" [(ngModel)]="Plaza.disabled"/>
         <label>Plazas de discapacitados</label><br /><br />
         
         <button routerLink="/mapa" routerLinkActive="active" (click)="buscar()">Buscar</button>
 
-    </form>
+    
 
 </div>
