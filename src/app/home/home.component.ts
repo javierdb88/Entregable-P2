@@ -18,5 +18,11 @@ export class HomeComponent implements OnInit {
   modelo:string = '';
   tipos:string[] = ["Coche","Moto"];
   marca:string='';
+  de_pago:boolean= false;
+  disabled:boolean= false;
+  
+  buscar(): void {
+
+  }
 
 }
